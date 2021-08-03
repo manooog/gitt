@@ -28,9 +28,9 @@ if [ "$n_target_branch" != "$target_branch" ]; then
     echo target_branch=$n_target_branch >>$cacheFile
 fi
 
-git checkout $target_branch
+git checkout $n_target_branch
 git pull --rebase
 git merge $current -Xtheirs --no-edit
-git push --set-upstream origin $target_branch
+git push --set-upstream origin $n_target_branch
 
 git checkout $current
